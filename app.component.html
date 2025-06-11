@@ -1,0 +1,14 @@
+<app-header (toggleSideBarForMe)="sideBarToggler()" *ngIf="isAuthenticated()"></app-header>
+
+<mat-drawer-container [ngClass]="{ 'authenticated': isAuthenticated() }">
+    
+    <mat-drawer mode="side" [opened]="sideBarOpen" *ngIf="isAuthenticated()"> 
+        <app-sidebar></app-sidebar> 
+    </mat-drawer>
+    
+    <mat-drawer-content> 
+        <router-outlet></router-outlet> 
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer class="footer" *ngIf="isAuthenticated()"></app-footer>

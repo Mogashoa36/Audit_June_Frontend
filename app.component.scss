@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+mat-drawer {
+  width: 350px;
+  padding-top: 150px;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: auto; /* Allow vertical scrolling*/
+
+}
+
+
+mat-drawer-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-drawer-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  // padding: 20px;
+  
+}
+
+mat-drawer-container.authenticated mat-drawer-content {
+  padding-top: 150px;
+  
+}
+.sub-header-page {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center;     /* Centers the content vertically */
+  padding: 8px;           /* Adds some padding to the header */
+  cursor: pointer;         /* Changes the cursor to pointer for clickable elements */
+}
+.content-container {
+  flex: 1;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #ffff;
+  padding: 0px 5px;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
